@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Asistencias</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Flatpickr (Selector de Fecha Personalizado) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Hojas de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR (NAVBAR) -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <div class="navbar-logo">
+                    <img src="build/reloj.png" alt="Logo">
+                </div>
+                <span class="navbar-title">Control de Asistencias</span>
+            </div>
+
+
+
+            <div class="navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-menu">
+                    <li class="sidebar-item active" data-tab="dashboard">
+                        <a href="#dashboard">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item" data-tab="reporte">
+                        <a href="#reporte">
+                            <i class="bi bi-calendar-check-fill"></i>
+                            <span>Reporte Diario</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item" data-tab="empleados">
+                        <a href="#empleados">
+                            <i class="bi bi-people-fill"></i>
+                            <span>Catálogo</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="navbar-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- PESTAÑA: DASHBOARD -->
+        <section id="dashboardTab" class="tab-content active">
+            <div class="header-wrapper">
+                <div>
+                    <h1 class="page-title">Dashboard General</h1>
+                    <p class="page-subtitle">Estadísticas y resumen de marcas registradas</p>
+                </div>
+            </div>
+
+            <!-- Grid de Métricas -->
+            <div class="metrics-grid">
+                <div class="metric-card total">
+                    <div class="metric-card-header">
+                        <span class="metric-card-title">Catálogo</span>
+                        <div class="metric-card-icon"><i class="bi bi-people-fill"></i></div>
+                    </div>
+                    <div class="metric-card-value" id="totalEmpleados">0</div>
+                </div>
+
+                <div class="metric-card matutino">
+                    <div class="metric-card-header">
+                        <span class="metric-card-title">Matutino</span>
+                        <div class="metric-card-icon"><i class="bi bi-sun-fill"></i></div>
+                    </div>
+                    <div class="metric-card-value" id="matutinoCount">0</div>
+                </div>
+
+                <div class="metric-card vespertino">
+                    <div class="metric-card-header">
+                        <span class="metric-card-title">Vespertino</span>
+                        <div class="metric-card-icon"><i class="bi bi-sunset-fill"></i></div>
+                    </div>
+                    <div class="metric-card-value" id="vespertinoCount">0</div>
+                </div>
+
+                <div class="metric-card nocturno">
+                    <div class="metric-card-header">
+                        <span class="metric-card-title">Nocturno</span>
+                        <div class="metric-card-icon"><i class="bi bi-moon-stars-fill"></i></div>
+                    </div>
+                    <div class="metric-card-value" id="nocturnoCount">0</div>
+                </div>
+            </div>
+
+            <!-- Panel de Carga de Archivo -->
+            <div class="action-card" style="display: flex; flex-direction: column; gap: 16px;">
+                <h3 style="font-weight: 600;"><i class="bi bi-cloud-upload-fill"></i> Cargar Archivo de Asistencia</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    Arrastra y suelta tu archivo biométrico (.TXT) en la siguiente zona o haz clic para seleccionarlo e
+                    importar marcas.
+                </p>
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-icon">
+                        <i class="bi bi-file-earmark-arrow-up-fill"></i>
+                    </div>
+                    <span class="upload-title">Arrastra y suelta tu archivo .TXT aquí</span>
+                    <span class="upload-text">o haz clic para explorar tus archivos locales</span>
+                    <input type="file" id="fileInput" class="hidden-file-input" accept=".txt">
+                </div>
+            </div>
+        </section>
+
+        <!-- PESTAÑA: REPORTE DIARIO -->
+        <section id="reporteTab" class="tab-content">
+            <div class="header-wrapper">
+                <div>
+                    <h1 class="page-title"><i class="bi bi-clock"></i> Reporte Diario de Asistencia</h1>
+                    <p class="page-subtitle">Consulta y exporta los registros calculados de entrada y salida</p>
+                </div>
+                <button class="btn btn-success" id="btnExportar">
+                    <i class="bi bi-file-earmark-excel-fill"></i> Exportar a Excel
+                </button>
+            </div>
+
+            <!-- Filtros -->
+            <div class="action-card">
+                <div class="filter-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="searchInput">Buscar Colaborador</label>
+                        <div class="input-icon-wrapper">
+                            <i class="bi bi-search icon-input"></i>
+                            <input type="text" id="searchInput" class="form-control custom-search-styled"
+                                placeholder="Escribe nombre, siglas o puesto...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="turnoFilter"><i class="bi bi-filter"></i> Filtrar por
+                            Turno</label>
+                        <div class="custom-dropdown" id="turnoDropdown">
+                            <div class="custom-dropdown-trigger" id="turnoDropdownTrigger" tabindex="0">
+                                <span class="selected-value">Todos los turnos</span>
+                                <i class="bi bi-chevron-down icon-arrow-right"></i>
+                            </div>
+                            <ul class="custom-dropdown-menu" id="turnoDropdownMenu">
+                                <li data-value="" class="active">Todos los turnos</li>
+                                <li data-value="MATUTINO">MATUTINO</li>
+                                <li data-value="VESPERTINO">VESPERTINO</li>
+                                <li data-value="NOCTURNO">NOCTURNO</li>
+                                <li data-value="DESCONOCIDO">SIN REGISTRAR (DESCONOCIDO)</li>
+                            </ul>
+                            <input type="hidden" id="turnoFilter" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="fechaFilter">Filtrar por Fecha</label>
+                        <div class="input-icon-wrapper">
+                            <i class="bi bi-clock icon-input"></i>
+                            <input type="text" id="fechaFilter" class="form-control custom-date-styled"
+                                placeholder="Selecciona una fecha...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de datos -->
+            <div class="table-container">
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th><i class="bi bi-person-badge"></i> Usuario/ID</th>
+                                <th><i class="bi bi-person"></i> Nombre</th>
+                                <th><i class="bi bi-briefcase"></i> Puesto</th>
+                                <th><i class="bi bi-calendar3"></i> Fecha</th>
+                                <th><i class="bi bi-sun"></i> Turno</th>
+                                <th><i class="bi bi-clock"></i> Entrada</th>
+                                <th><i class="bi bi-clock-fill"></i> Salida</th>
+                                <th><i class="bi bi-gear"></i> Acciones / Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaResumen">
+                            <!-- Datos generados dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- PESTAÑA: CATÁLOGO DE EMPLEADOS -->
+        <section id="empleadosTab" class="tab-content">
+            <div class="header-wrapper">
+                <div>
+                    <h1 class="page-title">Catálogo de Colaboradores</h1>
+                    <p class="page-subtitle">Gestiona de forma dinámica el personal del sistema</p>
+                </div>
+                <button class="btn btn-primary" id="btnNuevoEmpleado">
+                    <i class="bi bi-person-plus-fill"></i> Agregar Empleado
+                </button>
+            </div>
+
+            <!-- Barra de búsqueda rápida -->
+            <div class="action-card">
+                <div class="form-group" style="max-width: 400px;">
+                    <label class="form-label" for="searchEmpInput"><i class="bi bi-search"></i> Buscar Empleado</label>
+                    <input type="text" id="searchEmpInput" class="form-control"
+                        placeholder="Escribe nombre, siglas o puesto...">
+                </div>
+            </div>
+
+            <!-- Tabla de Catálogo -->
+            <div class="table-container">
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th><i class="bi bi-person-badge"></i> ID / Siglas</th>
+                                <th><i class="bi bi-person"></i> Nombre Completo</th>
+                                <th><i class="bi bi-briefcase"></i> Puesto</th>
+                                <th><i class="bi bi-sun"></i> Turno Asignado</th>
+                                <th><i class="bi bi-gear"></i> Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaEmpleados">
+                            <!-- Lista generada dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- VENTANA MODAL (CRUD EMPLEADOS) -->
+    <div class="modal-overlay" id="modalEmpleado">
+        <div class="modal-container">
+            <div class="modal-header">
+                <span class="modal-title" id="modalTitle">Agregar Empleado</span>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <form id="modalForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-label" for="empId">ID / Siglas del Colaborador (Único)*</label>
+                        <input type="text" id="empId" class="form-control" placeholder="Ej: AGSM" required
+                            maxlength="10">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="empNombre">Nombre Completo*</label>
+                        <input type="text" id="empNombre" class="form-control" placeholder="Ej: JUAN PEREZ GOMEZ"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="empPuesto">Puesto / Cargo</label>
+                        <input type="text" id="empPuesto" class="form-control" placeholder="Ej: CAPTURISTA">
+                    </div>
+
+                    <div class="form-group" style="position: relative;">
+                        <label class="form-label" for="empTurno">Turno Asignado*</label>
+                        <div class="custom-dropdown" id="modalTurnoDropdown">
+                            <div class="custom-dropdown-trigger" id="modalTurnoDropdownTrigger" tabindex="0">
+                                <span class="selected-value">Selecciona un turno</span>
+                                <i class="bi bi-chevron-down icon-arrow-right"></i>
+                            </div>
+                            <ul class="custom-dropdown-menu" id="modalTurnoDropdownMenu">
+                                <li data-value="" class="active">Selecciona un turno</li>
+                                <li data-value="MATUTINO">MATUTINO</li>
+                                <li data-value="VESPERTINO">VESPERTINO</li>
+                                <li data-value="NOCTURNO">NOCTURNO</li>
+                            </ul>
+                            <input type="text" id="empTurno" value="" required
+                                style="opacity: 0; width: 0; height: 0; position: absolute; pointer-events: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btnCancelarModal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR DE TOASTS -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- SheetJS (Librería Excel) -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+    <!-- Flatpickr (Selector de Fecha Personalizado) -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+    <!-- Scripts locales de lógica -->
+    <script src="js/parser.js"></script>
+    <script src="js/asistencia.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

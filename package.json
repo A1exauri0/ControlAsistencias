@@ -1,0 +1,46 @@
+{
+  "name": "controlasistencias",
+  "version": "1.0.0",
+  "description": "Este es un sistema local, dinámico y portable para procesar marcas de asistencia obtenidas de terminales biométricas (archivos en formato `.txt`).",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . ControlAsistencia --platform=win32 --arch=x64 --out=dist --icon=build/icon.ico --overwrite",
+    "build:installer": "electron-builder build --windows"
+  },
+  "build": {
+    "appId": "com.control.asistencia",
+    "productName": "ControlAsistencia",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Control de Asistencia"
+    },
+    "files": [
+      "**/*",
+      "!dist/**/*",
+      "!node_modules/**/*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A1exauri0/ControlAsistencias.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A1exauri0/ControlAsistencias/issues"
+  },
+  "homepage": "https://github.com/A1exauri0/ControlAsistencias#readme",
+  "devDependencies": {
+    "electron": "^42.4.0",
+    "electron-builder": "^26.15.2",
+    "electron-packager": "^17.1.2"
+  }
+}
