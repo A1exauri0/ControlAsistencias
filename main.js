@@ -15,16 +15,33 @@ const directorioDatos = path.join(directorioBase, 'data');
 const archivoEmpleados = path.join(directorioDatos, 'empleados.json');
 const archivoMarcas = path.join(directorioDatos, 'marcas.json');
 
-// Asegurar que la estructura de carpetas y archivos JSON exista
+// Asegurar que la estructura de carpetas y archivos JSON exista e inicializar base de datos
 function inicializarBaseDatos() {
     if (!fs.existsSync(directorioDatos)) {
         fs.mkdirSync(directorioDatos, { recursive: true });
     }
+
+    // Comprobar si necesitamos inicializar o sobrescribir catálogo de empleados vacío
+    let copiarEmpleados = false;
     if (!fs.existsSync(archivoEmpleados)) {
+        copiarEmpleados = true;
+    } else {
+        try {
+            const contenido = fs.readFileSync(archivoEmpleados, 'utf8').trim();
+            if (contenido === '' || contenido === '{}' || contenido === '[]') {
+                copiarEmpleados = true;
+            }
+        } catch (err) {
+            copiarEmpleados = true;
+        }
+    }
+
+    if (copiarEmpleados) {
         const rutaDefecto = path.join(__dirname, 'data', 'empleados.json');
         if (fs.existsSync(rutaDefecto)) {
             try {
                 fs.copyFileSync(rutaDefecto, archivoEmpleados);
+                console.log("Catálogo de empleados inicializado con éxito.");
             } catch (err) {
                 console.error("Error al copiar empleados por defecto:", err);
                 fs.writeFileSync(archivoEmpleados, JSON.stringify({}, null, 4), 'utf8');
@@ -33,6 +50,8 @@ function inicializarBaseDatos() {
             fs.writeFileSync(archivoEmpleados, JSON.stringify({}, null, 4), 'utf8');
         }
     }
+
+    // Inicializar marcas si no existen
     if (!fs.existsSync(archivoMarcas)) {
         const rutaDefecto = path.join(__dirname, 'data', 'marcas.json');
         if (fs.existsSync(rutaDefecto)) {
