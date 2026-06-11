@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . ControlAsistencia --platform=win32 --arch=x64 --out=dist --icon=build/icon.ico --overwrite",
+    "build": "electron-packager . ControlAsistencia --platform=win32 --arch=x64 --out=dist --icon=assets/icon.ico --overwrite",
     "build:installer": "electron-builder build --windows"
   },
   "build": {
@@ -13,7 +13,7 @@
     "productName": "ControlAsistencia",
     "win": {
       "target": "nsis",
-      "icon": "build/icon.ico"
+      "icon": "assets/icon.ico"
     },
     "nsis": {
       "oneClick": true,

@@ -178,7 +178,7 @@ function crearVentana() {
         },
         autoHideMenuBar: true,
         title: "Control de Asistencia - Escritorio",
-        icon: path.join(__dirname, 'build/icon.ico')
+        icon: path.join(__dirname, 'assets/icon.ico')
     });
 
     ventana.maximize();
