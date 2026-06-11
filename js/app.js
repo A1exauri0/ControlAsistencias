@@ -33,6 +33,7 @@ const ElementosDOM = {
   // Filtros de Reportes
   entradaBusqueda: document.getElementById("searchInput"),
   filtroTurno: document.getElementById("turnoFilter"),
+  filtroLugar: document.getElementById("lugarFilter"),
   filtroFecha: document.getElementById("fechaFilter"),
   botonExportar: document.getElementById("btnExportar"),
   tablaResumen: document.getElementById("tablaResumen"),
@@ -52,6 +53,7 @@ const ElementosDOM = {
   empleadoNombre: document.getElementById("empNombre"),
   empleadoPuesto: document.getElementById("empPuesto"),
   empleadoTurno: document.getElementById("empTurno"),
+  empleadoLugar: document.getElementById("empLugar"),
 
   // Cargador
   zonaSubida: document.getElementById("uploadZone"),
@@ -132,6 +134,10 @@ function configurarEscuchadores() {
     renderizarTablaAsistencias,
   );
   ElementosDOM.filtroFecha.addEventListener(
+    "change",
+    renderizarTablaAsistencias,
+  );
+  ElementosDOM.filtroLugar.addEventListener(
     "change",
     renderizarTablaAsistencias,
   );
@@ -410,12 +416,28 @@ function inicializarDropdownPersonalizado() {
     "turnoFilter",
   );
 
+  // Dropdown de Filtro de Lugar (Reporte Diario)
+  conectarDropdownCustom(
+    "lugarDropdown",
+    "lugarDropdownTrigger",
+    "lugarDropdownMenu",
+    "lugarFilter",
+  );
+
   // Dropdown de Turno en el Modal de Empleados
   conectarDropdownCustom(
     "modalTurnoDropdown",
     "modalTurnoDropdownTrigger",
     "modalTurnoDropdownMenu",
     "empTurno",
+  );
+
+  // Dropdown de Lugar en el Modal de Empleados
+  conectarDropdownCustom(
+    "modalLugarDropdown",
+    "modalLugarDropdownTrigger",
+    "modalLugarDropdownMenu",
+    "empLugar",
   );
 }
 
@@ -424,6 +446,7 @@ function renderizarTablaAsistencias() {
 
   const filtroTexto = ElementosDOM.entradaBusqueda.value.toLowerCase();
   const turno = ElementosDOM.filtroTurno.value;
+  const lugar = ElementosDOM.filtroLugar.value;
   const fecha = ElementosDOM.filtroFecha.value;
   const fechaNormalizada = normalizarFechaInput(fecha);
 
@@ -435,16 +458,17 @@ function renderizarTablaAsistencias() {
       r.puesto.toLowerCase().includes(filtroTexto);
 
     const coincideTurno = !turno || r.turno === turno;
+    const coincideLugar = !lugar || r.lugar === lugar;
     const coincideFecha = !fecha || r.fecha === fechaNormalizada;
 
-    return coincideTexto && coincideTurno && coincideFecha;
+    return coincideTexto && coincideTurno && coincideLugar && coincideFecha;
   });
 
   // Generar las filas de la tabla
   if (datosFiltrados.length === 0) {
     ElementosDOM.tablaResumen.innerHTML = `
             <tr>
-                <td colspan="8" style="text-align: center; color: var(--text-secondary); padding: 30px;">
+                <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 30px;">
                     No se encontraron registros de asistencia.
                 </td>
             </tr>
@@ -488,6 +512,7 @@ function renderizarTablaAsistencias() {
             <td>${r.puesto}</td>
             <td>${r.fecha}</td>
             <td>${badgeTurno}</td>
+            <td>${r.lugar || "-"}</td>
             <td style="font-weight: 500;">${r.entrada}</td>
             <td style="font-weight: 500;">${r.salida}</td>
             <td>
@@ -526,14 +551,15 @@ function renderizarTablaEmpleados() {
       e.id.toLowerCase().includes(filtroTexto) ||
       e.nombre.toLowerCase().includes(filtroTexto) ||
       e.puesto.toLowerCase().includes(filtroTexto) ||
-      e.turno.toLowerCase().includes(filtroTexto)
+      e.turno.toLowerCase().includes(filtroTexto) ||
+      (e.lugar && e.lugar.toLowerCase().includes(filtroTexto))
     );
   });
 
   if (filtrados.length === 0) {
     ElementosDOM.tablaEmpleados.innerHTML = `
             <tr>
-                <td colspan="5" style="text-align: center; color: var(--text-secondary); padding: 30px;">
+                <td colspan="6" style="text-align: center; color: var(--text-secondary); padding: 30px;">
                     No hay empleados registrados en el catálogo.
                 </td>
             </tr>
@@ -556,6 +582,7 @@ function renderizarTablaEmpleados() {
             <td style="font-weight: 500;">${e.nombre}</td>
             <td>${e.puesto}</td>
             <td>${badgeTurno}</td>
+            <td>${e.lugar || "-"}</td>
             <td>
                 <div style="display:flex; gap: 8px;">
                     <button class="btn btn-secondary btn-sm" onclick="editarEmpleado('${e.id}')">
@@ -603,9 +630,38 @@ function actualizarUIModalTurno(valor) {
   }
 }
 
+// Sincronizar el dropdown visual de lugares en el modal
+function actualizarUIModalLugar(valor) {
+  const triggerText = document
+    .getElementById("modalLugarDropdownTrigger")
+    ?.querySelector(".selected-value");
+  const menu = document.getElementById("modalLugarDropdownMenu");
+  const input = document.getElementById("empLugar");
+
+  if (!triggerText || !menu || !input) return;
+
+  input.value = valor || "VERSALLES";
+
+  // Remover activo anterior
+  const activeItem = menu.querySelector("li.active");
+  if (activeItem) activeItem.classList.remove("active");
+
+  // Buscar y activar el correspondiente
+  const item = menu.querySelector(`li[data-value="${valor || "VERSALLES"}"]`);
+  if (item) {
+    item.classList.add("active");
+    triggerText.innerText = item.innerText;
+  } else {
+    const defaultItem = menu.querySelector('li[data-value="VERSALLES"]');
+    if (defaultItem) defaultItem.classList.add("active");
+    triggerText.innerText = "Versalles";
+  }
+}
+
 function abrirModalEmpleado(presetId = "") {
   ElementosDOM.modalFormulario.reset();
   actualizarUIModalTurno("");
+  actualizarUIModalLugar("VERSALLES");
 
   if (presetId) {
     // Registro rápido de ID desconocido
@@ -634,6 +690,7 @@ window.editarEmpleado = function (id) {
   ElementosDOM.empleadoNombre.value = emp.nombre;
   ElementosDOM.empleadoPuesto.value = emp.puesto;
   actualizarUIModalTurno(emp.turno);
+  actualizarUIModalLugar(emp.lugar || "VERSALLES");
 
   ElementosDOM.modalEmpleado.classList.add("open");
 };
@@ -645,8 +702,9 @@ function manejarEnvioFormulario(e) {
   const nombre = ElementosDOM.empleadoNombre.value.trim().toUpperCase();
   const puesto = ElementosDOM.empleadoPuesto.value.trim().toUpperCase();
   const turno = ElementosDOM.empleadoTurno.value;
+  const lugar = ElementosDOM.empleadoLugar.value;
 
-  if (!id || !nombre || !turno) {
+  if (!id || !nombre || !turno || !lugar) {
     mostrarNotificacion(
       "Por favor completa todos los campos requeridos",
       "warning",
@@ -654,7 +712,7 @@ function manejarEnvioFormulario(e) {
     return;
   }
 
-  const datosEmpleado = { id, nombre, puesto, turno };
+  const datosEmpleado = { id, nombre, puesto, turno, lugar };
 
   window.api
     .guardarEmpleado(datosEmpleado)
@@ -785,6 +843,7 @@ function exportarExcel() {
 
   const filtroTexto = ElementosDOM.entradaBusqueda.value.toLowerCase();
   const turno = ElementosDOM.filtroTurno.value;
+  const lugar = ElementosDOM.filtroLugar.value;
   const fecha = ElementosDOM.filtroFecha.value;
   const fechaNormalizada = normalizarFechaInput(fecha);
 
@@ -796,9 +855,10 @@ function exportarExcel() {
       r.puesto.toLowerCase().includes(filtroTexto);
 
     const coincideTurno = !turno || r.turno === turno;
+    const coincideLugar = !lugar || r.lugar === lugar;
     const coincideFecha = !fecha || r.fecha === fechaNormalizada;
 
-    return coincideTexto && coincideTurno && coincideFecha;
+    return coincideTexto && coincideTurno && coincideLugar && coincideFecha;
   });
 
   const datosExportacion = datosFiltrados.map((r) => ({
@@ -807,6 +867,7 @@ function exportarExcel() {
     "Puesto de Trabajo": r.puesto,
     Fecha: r.fecha,
     Turno: r.turno,
+    Lugar: r.lugar,
     "Hora Entrada": r.entrada,
     "Hora Salida": r.salida,
     "Estatus Catálogo": r.registrado ? "Registrado" : "No Registrado",

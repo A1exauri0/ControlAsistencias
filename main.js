@@ -100,7 +100,8 @@ ipcMain.handle('guardar-empleado', async (event, empleado) => {
         empleados[id] = {
             nombre: empleado.nombre.toUpperCase().trim(),
             puesto: (empleado.puesto || 'CAPTURISTA').toUpperCase().trim(),
-            turno: empleado.turno.toUpperCase().trim()
+            turno: empleado.turno.toUpperCase().trim(),
+            lugar: (empleado.lugar || 'VERSALLES').toUpperCase().trim()
         };
         
         fs.writeFileSync(archivoEmpleados, JSON.stringify(empleados, null, 4), 'utf8');

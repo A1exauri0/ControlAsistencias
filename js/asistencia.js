@@ -94,12 +94,14 @@ function procesarAsistencia(registros, mapaEmpleados) {
         let nombre = "Empleado No Registrado";
         let puesto = "Sin registrar";
         let turno = "MATUTINO";
+        let lugar = "VERSALLES";
         let registrado = false;
 
         if (info) {
             nombre = info.nombre;
             puesto = info.puesto;
             turno = info.turno;
+            lugar = info.lugar || "VERSALLES";
             registrado = true;
         }
 
@@ -118,6 +120,7 @@ function procesarAsistencia(registros, mapaEmpleados) {
                 nombre: nombre,
                 puesto: puesto,
                 turno: registrado ? turno : "DESCONOCIDO",
+                lugar: registrado ? lugar : "DESCONOCIDO",
                 fecha: fecha,
                 entrada: "-",
                 salida: "-",

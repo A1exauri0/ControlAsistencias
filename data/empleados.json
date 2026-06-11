@@ -2,461 +2,553 @@
     "AGSM": {
         "nombre": "ANGEL GABRIEL SARMIENTO MATUS",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "MREC": {
         "nombre": "MICHEL RAFID ESTEBAN CISNEROS",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "JESB": {
         "nombre": "JOSE EDUARDO SILICEO BARRIENTOS",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "ADJP": {
         "nombre": "ALAN DE JESÚS MATÍAS PÉREZ",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "FAMC": {
         "nombre": "FABIAN ALEJANDRO MAZARIEGOS CORONEL",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "FIGM": {
         "nombre": "FERNANDA INES GUTIERREZ MORALES",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "CLUZ": {
         "nombre": "CHRISTIAN LIZETH URBINA ZENTENO",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "IAIV": {
         "nombre": "IRVING ALEJANDRO ISLAS VILLEGA",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "LAMC": {
         "nombre": "LUIS ALONSO MARTINEZ LOPEZ",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "SLHC": {
         "nombre": "SANDRA LUZ HERNANDEZ CRUZ",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "MAHA": {
         "nombre": "MARIA ASUNCION HERNANDEZ ALTURNA",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "OMMM": {
         "nombre": "OMAR MAURICIO MORALES MORENO",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "ASGG": {
         "nombre": "ANDREA SOLIS GONZALEZ",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "KYMA": {
         "nombre": "KARLA YADIRA MENDEZ ARCE",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "PAV": {
         "nombre": "PAOLA ARRAZATE VILA",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "FFPS": {
         "nombre": "FRANCISCO FIDEL PALMA SOLORZANO",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "EPG": {
         "nombre": "EDGAR PEREZ GAMBOA",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "FFFP": {
         "nombre": "FERNANDO FRANCISCO FRANCO PEREZ",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "CGE": {
         "nombre": "CESIA GUTIERREZ ENRRIQUEZ",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "LEDC": {
         "nombre": "LUIS EDGAR DE LA CRUZ CAMACHO",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "KNML": {
         "nombre": "KARLA NADXIEL MALDONADO LOPES",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "AMGP": {
         "nombre": "ANA MAGDALENA GUTIERREZ PRADO",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "VCP": {
         "nombre": "VIRIDIANA CONSOSPO PEREZ",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "AMR": {
         "nombre": "ABIGAIL MORALES ROMERO",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "DLCS": {
         "nombre": "DEISY LETICIA CRUZ SANCHEZ",
         "puesto": "CAPTURISTA",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "VCR": {
         "nombre": "VALERIA CRUZ RINCON",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "SHCG": {
         "nombre": "SANDRA HAZCEL CALYMALLOR GUILLEN",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "ABRP": {
         "nombre": "AMERICA BEATRIZ RAMIREZ PEREZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "XYAC": {
         "nombre": "XOCHILT YADIRA ARCE CAMACHO",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "ALGH": {
         "nombre": "ADRIANA LIZETH GONZALEZ HERNANDEZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "KMM": {
         "nombre": "KARINA MORENO MOLINA",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "LYCM": {
         "nombre": "LESLY YAMILETH COETO MARTHA",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "JGH": {
         "nombre": "JENNIFER GARCIA FERNANDEZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "AIHF": {
         "nombre": "ANA ISABEL HERNANDEZ HERNANDEZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "CEAG": {
         "nombre": "CARLOS EDUARDO AMADOR GUTIERREZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "FZP": {
         "nombre": "FERNANDO ZUÑIGA PEREZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "ZGMJ": {
         "nombre": "ZULEIMA GUADALUPE MORENO JUAREZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "PCPH": {
         "nombre": "PATRICIA CANDELARIA PEREZ HERNANDEZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "LECG": {
         "nombre": "LUIS ENRIQUE CHAVEZ GOMEZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "JGSDC": {
         "nombre": "JOSE GUADALUPE SARMIENTO DE LA CRUZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "IAVE": {
         "nombre": "ISIS AYLINE VELASCO ESCUDERO",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "JYGA": {
         "nombre": "JESICA YADIRA GUTIERREZ ABARCA",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "SELL": {
         "nombre": "SANDRA ESMERALDA LOPEZ LOPEZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "GNMC": {
         "nombre": "GABRIELA NOEMI MARTINEZ CONSOSPO",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "MJAC": {
         "nombre": "MARIA JOSE ARCE CAMACHO",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "LMMF": {
         "nombre": "LUCELY MICHELLE MARTINEZ FRANCO",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "CCG": {
         "nombre": "CAROLINA CAMACHO GONZALEZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "YGLP": {
         "nombre": "YESENIA GUADALUPE LOPEZ PEREZ",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "FGNP": {
         "nombre": "FATIMA GUADALUPE NUÑEZ PANANA",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "GCRG": {
         "nombre": "GABRIELA CANDELARIA RUIZ GORDILLO",
         "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
+        "turno": "VESPERTINO",
+        "lugar": "VERSALLES"
     },
     "ADJL": {
         "nombre": "ADAN DE JESUS RUIZ LOPEZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "LGGV": {
         "nombre": "LUIS GABRIEL GARCIA VIDAL",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "JJCM": {
         "nombre": "JUAN JOSE CHANTIRI MARTINEZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "FDRS": {
         "nombre": "FATIMA DEL ROSARIO MOLINA SUAREZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "LGCL": {
         "nombre": "LILIA GUADALUPE CABRERA LOPEZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "KRPE": {
         "nombre": "KARLA ROMINA PEREZ ENTZIN",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "JYCG": {
         "nombre": "JULISSA YAMILET CRUZ GUTIERREZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "JIJC": {
         "nombre": "JACOB ISAIAS JIMENEZ CRUZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "AMMJ": {
         "nombre": "ANTHONY MARIN MORENO JUAREZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "BASM": {
         "nombre": "BELEN ASUNCION SANCHEZ MOLINA",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "JMGA": {
         "nombre": "JUAN MARCOS GONZALEZ AGUILAR",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "JZGR": {
         "nombre": "JESSICA ZUCENA GONZALEZ RUIZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "MJGL": {
         "nombre": "MERARI JERIEL GONZALEZ LOPEZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "AAML": {
         "nombre": "ADOLFO ANGEL MATEOS LOPEZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "MRM": {
         "nombre": "MELANIA REYES MENDOZA",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "PJMB": {
         "nombre": "PEDRO DE JESUS MONTEJO BARCENAS",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "AKOM": {
         "nombre": "ANA KAREN ORANTES MARTINEZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "OHA": {
         "nombre": "ORLANDO HERNANDEZ ARIAS",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "SSMO": {
         "nombre": "SANDY SADITT MARTINEZ ORTIZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "CRJA": {
         "nombre": "CRISTOPHER RODOLFO JIMENEZ ARROYO",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "MALJ": {
         "nombre": "MARIA ASUNCION LOPEZ JIMENEZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "MVCA": {
         "nombre": "MARIA VIRGINIA CASTRO AGUILAR",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "MAS": {
         "nombre": "MAURICIO AGUILAR SANCHEZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "CAH": {
         "nombre": "CARLOS ALEJANDRO HERNANDEZ",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "BYNR": {
         "nombre": "BRENDA YAMILETH NUCAMENDI REYES",
         "puesto": "CAPTURISTA",
-        "turno": "NOCTURNO"
+        "turno": "NOCTURNO",
+        "lugar": "VERSALLES"
     },
     "BYMJ": {
         "nombre": "BRENDA YANET MORALES JIMENEZ",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "SRM": {
         "nombre": "SELENE RUIZ MORENO",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "MFNR": {
         "nombre": "MARIA FERNANDA NUCAMENDI RIVERA",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "MGPV": {
         "nombre": "MONSTSERRAT GUADALUPE PEREZ VELASCO",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "ESM": {
         "nombre": "ERNESTO SANTOS MORALES",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "AMD": {
         "nombre": "ADRIANA MARIN DURAN",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "MAB": {
         "nombre": "MONICE ARGUELLO BERMUDEZ",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "AGDC": {
         "nombre": "ANA GABRIELA DEL CARPIO CUNDAPI",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "EILG": {
         "nombre": "ERICK IVAN LOPEZ GUTIERREZ",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "DFGDS": {
         "nombre": "DEYSI FABIOLA GUTIERREZ DE LOS SANTOS",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "ARR": {
         "nombre": "ANDREA ROQUE RAMIREZ",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "SAGM": {
         "nombre": "SARAI ALEJANDRA GUTIERREZ MELCHOR",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "VJGZ": {
         "nombre": "VICTOR DE JESUS GOMEZ ZEA",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "NNMG": {
         "nombre": "NANCY NATALIA MARÍN GUTIÉRREZ",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "DN": {
         "nombre": "DANIEL HERNANDEZ",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "JBCJ": {
         "nombre": "JOSE BENITO CORZO JUAREZ",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     },
     "AAGV": {
         "nombre": "ADRIAN ALEJANDRO GOMEZ VAZQUEZ",
         "puesto": "BASE",
-        "turno": "MATUTINO"
+        "turno": "MATUTINO",
+        "lugar": "VERSALLES"
     }
 }
