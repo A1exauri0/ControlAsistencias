@@ -224,18 +224,28 @@
         "puesto": "CAPTURISTA",
         "turno": "VESPERTINO"
     },
-    "LDTZ": {
-        "nombre": "LUIS DAVID TOVILLA ZUBILLAGA",
-        "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
-    },
-    "SLDL": {
-        "nombre": "SANDRA LUCIA DIAZ LOPEZ",
-        "puesto": "CAPTURISTA",
-        "turno": "VESPERTINO"
-    },
     "LMMF": {
         "nombre": "LUCELY MICHELLE MARTINEZ FRANCO",
+        "puesto": "CAPTURISTA",
+        "turno": "VESPERTINO"
+    },
+    "CCG": {
+        "nombre": "CAROLINA CAMACHO GONZALEZ",
+        "puesto": "CAPTURISTA",
+        "turno": "VESPERTINO"
+    },
+    "YGLP": {
+        "nombre": "YESENIA GUADALUPE LOPEZ PEREZ",
+        "puesto": "CAPTURISTA",
+        "turno": "VESPERTINO"
+    },
+    "FGNP": {
+        "nombre": "FATIMA GUADALUPE NUÑEZ PANANA",
+        "puesto": "CAPTURISTA",
+        "turno": "VESPERTINO"
+    },
+    "GCRG": {
+        "nombre": "GABRIELA CANDELARIA RUIZ GORDILLO",
         "puesto": "CAPTURISTA",
         "turno": "VESPERTINO"
     },
@@ -354,14 +364,99 @@
         "puesto": "CAPTURISTA",
         "turno": "NOCTURNO"
     },
-    "KMSA": {
-        "nombre": "KIARA MICHELLE SAMAYOA ALTUZAR",
+    "CAH": {
+        "nombre": "CARLOS ALEJANDRO HERNANDEZ",
         "puesto": "CAPTURISTA",
         "turno": "NOCTURNO"
     },
     "BYNR": {
-        "nombre": "BRENDA YAMILETH NUCAMENDI REYS",
+        "nombre": "BRENDA YAMILETH NUCAMENDI REYES",
         "puesto": "CAPTURISTA",
         "turno": "NOCTURNO"
+    },
+    "BYMJ": {
+        "nombre": "BRENDA YANET MORALES JIMENEZ",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "SRM": {
+        "nombre": "SELENE RUIZ MORENO",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "MFNR": {
+        "nombre": "MARIA FERNANDA NUCAMENDI RIVERA",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "MGPV": {
+        "nombre": "MONSTSERRAT GUADALUPE PEREZ VELASCO",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "ESM": {
+        "nombre": "ERNESTO SANTOS MORALES",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "AMD": {
+        "nombre": "ADRIANA MARIN DURAN",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "MAB": {
+        "nombre": "MONICE ARGUELLO BERMUDEZ",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "AGDC": {
+        "nombre": "ANA GABRIELA DEL CARPIO CUNDAPI",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "EILG": {
+        "nombre": "ERICK IVAN LOPEZ GUTIERREZ",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "DFGDS": {
+        "nombre": "DEYSI FABIOLA GUTIERREZ DE LOS SANTOS",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "ARR": {
+        "nombre": "ANDREA ROQUE RAMIREZ",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "SAGM": {
+        "nombre": "SARAI ALEJANDRA GUTIERREZ MELCHOR",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "VJGZ": {
+        "nombre": "VICTOR DE JESUS GOMEZ ZEA",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "NNMG": {
+        "nombre": "NANCY NATALIA MARÍN GUTIÉRREZ",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "DN": {
+        "nombre": "DANIEL HERNANDEZ",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "JBCJ": {
+        "nombre": "JOSE BENITO CORZO JUAREZ",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
+    },
+    "AAGV": {
+        "nombre": "ADRIAN ALEJANDRO GOMEZ VAZQUEZ",
+        "puesto": "BASE",
+        "turno": "MATUTINO"
     }
 }

@@ -42,5 +42,8 @@
     "electron": "^42.4.0",
     "electron-builder": "^26.15.2",
     "electron-packager": "^17.1.2"
+  },
+  "overrides": {
+    "@noble/hashes": "1.8.0"
   }
 }
