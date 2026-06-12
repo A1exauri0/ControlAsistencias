@@ -95,7 +95,7 @@ ipcMain.handle('obtener-datos', async () => {
 ipcMain.handle('guardar-empleado', async (event, empleado) => {
     try {
         const empleados = JSON.parse(fs.readFileSync(archivoEmpleados, 'utf8') || '{}');
-        const id = empleado.id.toUpperCase().trim();
+        const id = empleado.id.trim();
         
         empleados[id] = {
             nombre: empleado.nombre.toUpperCase().trim(),
@@ -116,13 +116,19 @@ ipcMain.handle('guardar-empleado', async (event, empleado) => {
 ipcMain.handle('eliminar-empleado', async (event, id) => {
     try {
         const empleados = JSON.parse(fs.readFileSync(archivoEmpleados, 'utf8') || '{}');
-        const idDestino = id.toUpperCase().trim();
+        const idDestino = id.trim();
         
         if (empleados[idDestino]) {
             delete empleados[idDestino];
             fs.writeFileSync(archivoEmpleados, JSON.stringify(empleados, null, 4), 'utf8');
             return { success: true, empleados };
         } else {
+            const llaveEncontrada = Object.keys(empleados).find(k => k.trim().toUpperCase() === idDestino.toUpperCase());
+            if (llaveEncontrada) {
+                delete empleados[llaveEncontrada];
+                fs.writeFileSync(archivoEmpleados, JSON.stringify(empleados, null, 4), 'utf8');
+                return { success: true, empleados };
+            }
             return { success: false, error: 'Empleado no encontrado' };
         }
     } catch (error) {

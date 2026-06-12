@@ -87,9 +87,18 @@ function esSalida(hm, turno) {
 function procesarAsistencia(registros, mapaEmpleados) {
     const mapa = {};
 
+    // Crear mapa auxiliar en mayúsculas para búsquedas insensibles ultra rápidas
+    const mapaEmpleadosUpper = {};
+    for (const key in mapaEmpleados) {
+        mapaEmpleadosUpper[key.trim().toUpperCase()] = {
+            ...mapaEmpleados[key],
+            idOriginal: key
+        };
+    }
+
     registros.forEach(r => {
         const usuarioLimpio = r.usuario ? r.usuario.trim().toUpperCase() : "";
-        const info = mapaEmpleados[usuarioLimpio];
+        const info = mapaEmpleadosUpper[usuarioLimpio];
         
         let nombre = "Empleado No Registrado";
         let puesto = "Sin registrar";
@@ -116,7 +125,7 @@ function procesarAsistencia(registros, mapaEmpleados) {
 
         if (!mapa[llave]) {
             mapa[llave] = {
-                usuario: usuarioLimpio,
+                usuario: info ? info.idOriginal : usuarioLimpio,
                 nombre: nombre,
                 puesto: puesto,
                 turno: registrado ? turno : "DESCONOCIDO",
@@ -162,5 +171,41 @@ function procesarAsistencia(registros, mapaEmpleados) {
         }
     });
 
+    // Calcular retardo para cada asistencia agrupada
+    for (const llave in mapa) {
+        const registro = mapa[llave];
+        if (registro.registrado && registro.entrada !== "-") {
+            registro.retardo = calcularRetardo(registro.entrada, registro.turno);
+        } else {
+            registro.retardo = null;
+        }
+    }
+
     return Object.values(mapa);
+}
+
+// ========================================
+// CALCULAR RETARDO CON 10 MIN DE TOLERANCIA
+// ========================================
+function calcularRetardo(entrada, turno) {
+    if (!entrada || entrada === "-") return null;
+    
+    const hm = horaMinutos(entrada);
+    const tolerancia = 10; // 10 minutos
+    
+    if (turno === "MATUTINO") {
+        const horaLimite = 6 * 60 + tolerancia; // 06:10
+        return hm > horaLimite;
+    } else if (turno === "VESPERTINO") {
+        const horaLimite = 14 * 60 + tolerancia; // 14:10
+        return hm > horaLimite;
+    } else if (turno === "NOCTURNO") {
+        const horaLimite = 22 * 60 + tolerancia; // 22:10
+        if (hm >= 1320) {
+            return hm > horaLimite;
+        } else {
+            return hm <= 360; 
+        }
+    }
+    return null;
 }

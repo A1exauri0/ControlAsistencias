@@ -560,6 +560,10 @@ body.dark .metric-card.nocturno::before { background-color: #cbd5e1; }
     vertical-align: middle;
 }
 
+.custom-table tbody td:last-child {
+    white-space: nowrap;
+}
+
 /* Filas Destacadas */
 .row-unregistered {
     background-color: rgba(239, 68, 68, 0.04) !important;
@@ -579,6 +583,12 @@ body.dark .metric-card.nocturno::before { background-color: #cbd5e1; }
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.badge i {
+    margin-right: 6px;
+    display: inline-flex;
 }
 
 .badge-primary { background-color: rgba(79, 70, 229, 0.1); color: var(--primary); }
@@ -983,6 +993,25 @@ span.flatpickr-weekday {
     background: var(--primary) !important;
     border-color: var(--primary) !important;
     color: #fff !important;
+}
+
+.flatpickr-day.inRange {
+    background: rgba(79, 70, 229, 0.1) !important;
+    border-color: transparent !important;
+    color: var(--primary) !important;
+}
+
+body.dark .flatpickr-day.inRange {
+    background: rgba(79, 70, 229, 0.25) !important;
+    color: #e0e7ff !important;
+}
+
+.flatpickr-day.inRange:hover {
+    background: rgba(79, 70, 229, 0.2) !important;
+}
+
+body.dark .flatpickr-day.inRange:hover {
+    background: rgba(79, 70, 229, 0.35) !important;
 }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months {

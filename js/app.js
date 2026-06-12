@@ -333,13 +333,37 @@ function normalizarFechaInput(fechaInput) {
   return `${d}/${m}/${y}`;
 }
 
+function verificarCoincidenciaFecha(fechaRegistroStr, fechasSeleccionadas) {
+  if (!fechasSeleccionadas || fechasSeleccionadas.length === 0) return true;
+  
+  const [d, m, y] = fechaRegistroStr.split("/").map(Number);
+  const fechaReg = new Date(y, m - 1, d);
+  fechaReg.setHours(0, 0, 0, 0);
+
+  if (fechasSeleccionadas.length === 2) {
+    const inicio = new Date(fechasSeleccionadas[0]);
+    inicio.setHours(0, 0, 0, 0);
+    const fin = new Date(fechasSeleccionadas[1]);
+    fin.setHours(0, 0, 0, 0);
+    return fechaReg >= inicio && fechaReg <= fin;
+  } else if (fechasSeleccionadas.length === 1) {
+    const inicio = new Date(fechasSeleccionadas[0]);
+    inicio.setHours(0, 0, 0, 0);
+    return fechaReg.getTime() === inicio.getTime();
+  }
+  return true;
+}
+
 function inicializarDatePicker() {
   flatpickr("#fechaFilter", {
     locale: "es",
     dateFormat: "d/m/Y",
+    mode: "range",
     allowInput: true,
     onChange: function (selectedDates, dateStr) {
-      renderizarTablaAsistencias();
+      if (selectedDates.length === 0 || selectedDates.length === 2) {
+        renderizarTablaAsistencias();
+      }
     },
   });
 }
@@ -447,19 +471,22 @@ function renderizarTablaAsistencias() {
   const filtroTexto = ElementosDOM.entradaBusqueda.value.toLowerCase();
   const turno = ElementosDOM.filtroTurno.value;
   const lugar = ElementosDOM.filtroLugar.value;
-  const fecha = ElementosDOM.filtroFecha.value;
-  const fechaNormalizada = normalizarFechaInput(fecha);
+  
+  const fp = document.getElementById("fechaFilter")?._flatpickr;
+  const fechasSeleccionadas = fp ? fp.selectedDates : [];
 
   // Filtrar los datos en el cliente
   const datosFiltrados = EstadoApp.resumenGlobal.filter((r) => {
     const coincideTexto =
       r.nombre.toLowerCase().includes(filtroTexto) ||
       r.usuario.toLowerCase().includes(filtroTexto) ||
-      r.puesto.toLowerCase().includes(filtroTexto);
+      r.puesto.toLowerCase().includes(filtroTexto) ||
+      r.entrada.includes(filtroTexto) ||
+      r.salida.includes(filtroTexto);
 
     const coincideTurno = !turno || r.turno === turno;
     const coincideLugar = !lugar || r.lugar === lugar;
-    const coincideFecha = !fecha || r.fecha === fechaNormalizada;
+    const coincideFecha = verificarCoincidenciaFecha(r.fecha, fechasSeleccionadas);
 
     return coincideTexto && coincideTurno && coincideLugar && coincideFecha;
   });
@@ -468,7 +495,7 @@ function renderizarTablaAsistencias() {
   if (datosFiltrados.length === 0) {
     ElementosDOM.tablaResumen.innerHTML = `
             <tr>
-                <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 30px;">
+                <td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 30px;">
                     No se encontraron registros de asistencia.
                 </td>
             </tr>
@@ -501,6 +528,15 @@ function renderizarTablaAsistencias() {
       accion = `<span style="color: var(--text-secondary); font-size: 0.85rem;">Correcto</span>`;
     }
 
+    let badgeRetardo = "";
+    if (r.retardo === true) {
+      badgeRetardo = '<span class="badge badge-danger"><i class="bi bi-clock-fill me-1"></i>Retardo</span>';
+    } else if (r.retardo === false) {
+      badgeRetardo = '<span class="badge badge-success"><i class="bi bi-check-circle-fill me-1"></i>A tiempo</span>';
+    } else {
+      badgeRetardo = '<span style="color: var(--text-secondary);">-</span>';
+    }
+
     const tr = document.createElement("tr");
     if (!r.registrado) {
       tr.classList.add("row-unregistered");
@@ -515,6 +551,7 @@ function renderizarTablaAsistencias() {
             <td>${r.lugar || "-"}</td>
             <td style="font-weight: 500;">${r.entrada}</td>
             <td style="font-weight: 500;">${r.salida}</td>
+            <td>${badgeRetardo}</td>
             <td>
                 <div style="display:flex; align-items:center; gap:10px;">
                     ${badgeRegistro} ${accion}
@@ -698,7 +735,7 @@ window.editarEmpleado = function (id) {
 function manejarEnvioFormulario(e) {
   e.preventDefault();
 
-  const id = ElementosDOM.empleadoId.value.trim().toUpperCase();
+  const id = ElementosDOM.empleadoId.value.trim();
   const nombre = ElementosDOM.empleadoNombre.value.trim().toUpperCase();
   const puesto = ElementosDOM.empleadoPuesto.value.trim().toUpperCase();
   const turno = ElementosDOM.empleadoTurno.value;
@@ -844,19 +881,22 @@ function exportarExcel() {
   const filtroTexto = ElementosDOM.entradaBusqueda.value.toLowerCase();
   const turno = ElementosDOM.filtroTurno.value;
   const lugar = ElementosDOM.filtroLugar.value;
-  const fecha = ElementosDOM.filtroFecha.value;
-  const fechaNormalizada = normalizarFechaInput(fecha);
+
+  const fp = document.getElementById("fechaFilter")?._flatpickr;
+  const fechasSeleccionadas = fp ? fp.selectedDates : [];
 
   // Obtener los datos actualmente filtrados para exportar exactamente lo que ve el usuario
   const datosFiltrados = EstadoApp.resumenGlobal.filter((r) => {
     const coincideTexto =
       r.nombre.toLowerCase().includes(filtroTexto) ||
       r.usuario.toLowerCase().includes(filtroTexto) ||
-      r.puesto.toLowerCase().includes(filtroTexto);
+      r.puesto.toLowerCase().includes(filtroTexto) ||
+      r.entrada.includes(filtroTexto) ||
+      r.salida.includes(filtroTexto);
 
     const coincideTurno = !turno || r.turno === turno;
     const coincideLugar = !lugar || r.lugar === lugar;
-    const coincideFecha = !fecha || r.fecha === fechaNormalizada;
+    const coincideFecha = verificarCoincidenciaFecha(r.fecha, fechasSeleccionadas);
 
     return coincideTexto && coincideTurno && coincideLugar && coincideFecha;
   });
@@ -870,6 +910,7 @@ function exportarExcel() {
     Lugar: r.lugar,
     "Hora Entrada": r.entrada,
     "Hora Salida": r.salida,
+    "Retardo": r.retardo === true ? "Retardo" : (r.retardo === false ? "A tiempo" : "-"),
     "Estatus Catálogo": r.registrado ? "Registrado" : "No Registrado",
   }));
 

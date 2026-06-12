@@ -550,5 +550,515 @@
         "puesto": "BASE",
         "turno": "MATUTINO",
         "lugar": "VERSALLES"
+    },
+    "DOCC": {
+        "nombre": "DULCE OLIVIA CRUZ CRUZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "EACO": {
+        "nombre": "EVELIN ARLETH CRUZ OCAÑA",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "FJGM": {
+        "nombre": "FRIDA JAEL GONZALEZ MARIN",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "LAL": {
+        "nombre": "BELLA STEPHANY DE LA CRUZ LOPEZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "ERP": {
+        "nombre": "ESPERANZA RUIZ PEREZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "IAR": {
+        "nombre": "MARIA DEL ROSARIO HERNANDEZ LIEVANO",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "AMRG": {
+        "nombre": "ABNER MANUEL RUIZ GOMEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "JCPZ": {
+        "nombre": "JANNET CRYSTAL PANIAGUA ZENTENO",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "JRVJ": {
+        "nombre": "JOSE RICARDO VAZQUEZ JIMENEZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "DIL": {
+        "nombre": "GALDINO JIMENEZ PEREZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "OLPG": {
+        "nombre": "OLGA LIDIA PEREZ GONZALEZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "RYMO": {
+        "nombre": "ROXANA YAZMIN MOLINA OVANDO",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "FCGE": {
+        "nombre": "FATIMA CAROLINA GARCIA ESTRADA",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "GRR": {
+        "nombre": "GABRIELA RAMIREZ RUIZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "KYMC": {
+        "nombre": "KARLA YARELI MENDOZA CERVANTES",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "CVMC": {
+        "nombre": "CARLOS VALENTIN MENDOZA CERVANTES",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "NEAV": {
+        "nombre": "NELLY ELIZABETH ALVAREZ VAZQUEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "JRCC": {
+        "nombre": "JOSE RICARDO CHUMBA CASTILLO",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "MFSC": {
+        "nombre": "MARIA FELIPA SANTOS CRUZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "BES": {
+        "nombre": "LISBETH LAZARO ALVAREZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "LATH": {
+        "nombre": "LUIS ANGEL TRUJILLO HERNANDEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "LJCC": {
+        "nombre": "LEONARDO JOHANAN CASTAÑON DE LA CRUZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "CACA": {
+        "nombre": "CARLOS ALBERTO CASTILLEJOS ARCE",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "MBT": {
+        "nombre": "MAURICIO BONIFAZ TREJO",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "HHVM": {
+        "nombre": "HUGO HEBERTO VERA MORALES",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "FGRP": {
+        "nombre": "FERNANDA GUADALUPE ROMAY PEREZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "GBH": {
+        "nombre": "GUADALUPE BENITEZ HERNANDEZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "JAAV": {
+        "nombre": "JAVIER ALEXANDER AGUILAR VAZQUEZ",
+        "puesto": "ASISTENTE GENERAL",
+        "turno": "MATUTINO",
+        "lugar": "IREC"
+    },
+    "ABRAHAM": {
+        "nombre": "ABRAHAM TRINIDAD MORENO GONZALEZ",
+        "puesto": "TI",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "AdolfoPE": {
+        "nombre": "ADOLFO PASCACIO ESPINOSA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "AlanZOS": {
+        "nombre": "ALAN ZAID OROZCO SANCHEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "AlbertoC": {
+        "nombre": "ALBERTO CRUZ SARMIENTO",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "AlmaMP": {
+        "nombre": "ALMA ROSA MENDOZA POLA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "ANAKHJ": {
+        "nombre": "ANA KAREN HERNANDEZ JIMENEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "AndresSA": {
+        "nombre": "ANDRES DANIEL SALINAS AVILA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "AngelaHG": {
+        "nombre": "ANGELA YURIDIA HERNANDEZ GOMEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "Aketzali": {
+        "nombre": "AKETZALI BENITEZ HERNANDEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "Beverly": {
+        "nombre": "BEVERLY CAMPOS MORALES",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "BrianMCO": {
+        "nombre": "BRIAN MICHELL CORONEL OVILLA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "carlosGC": {
+        "nombre": "CARLOS ERICK GARCIA CRUZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "CesarOSP": {
+        "nombre": "CESAR OCTAVIO SANTOS PERAZA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "Claribet": {
+        "nombre": "CLARIBET MUÑOA CHACON",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "DanielMR": {
+        "nombre": "DANIEL ISAI MARTINEZ RODRIGUEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "DianaAS": {
+        "nombre": "DIANA DEL ROSARIO ARGUELLO SANCHEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "Edoardo": {
+        "nombre": "EDOARDO DE LA CRUZ RAMIREZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "EdsonARJ": {
+        "nombre": "EDSON ARMANDO RAMIREZ JIMENEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "FatimaEN": {
+        "nombre": "FATIMA JHOSEP ESPINOSA NANDAYAPA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "FatimaRG": {
+        "nombre": "FATIMA MONSERRAT REYES GOMEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "DanielBP": {
+        "nombre": "FERNANDO DANIEL BALBUENA PADILLA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "HectorMP": {
+        "nombre": "HECTOR ALEXIS MOGUEL PEREZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "IngridNR": {
+        "nombre": "INGRID ISABEL NATAREN ROBLES",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "Iñaki": {
+        "nombre": "IÑAKI RODRIGUEZ AVENDAÑO",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "IrmaFNO": {
+        "nombre": "IRMA FERNANDA NATAREN ORANTES",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "JatziriA": {
+        "nombre": "JATZIRI JOSSELYN ALVAREZ GONZALEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "JavierDF": {
+        "nombre": "JAVIER EDUARDO DURANTE FIGUEROA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "JimenaRS": {
+        "nombre": "JIMENA DE JESUS REYES SANTOS",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "JorgeDME": {
+        "nombre": "JORGE DANIEL MIRANDA ESQUINCA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "JuanHJ": {
+        "nombre": "JUAN JOSE HERNANDEZ JIMENEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "JuanPMG": {
+        "nombre": "JUAN PABLO MENESE GUZMAN",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "JulietaA": {
+        "nombre": "JULIETA ALEGRIA HERNANDEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "KarlaPRG": {
+        "nombre": "KARLA PAOLA RODRIGUEZ GOMEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "KarlaMG": {
+        "nombre": "KARLA PATRICIA MORALES GARCIA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "KevinMC": {
+        "nombre": "KEVIN MENDOZA DE LA CRUZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "Leonardo": {
+        "nombre": "LEONARDO GABRIEL CAMPOS VELASCO",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "LeoPL": {
+        "nombre": "LEONARDO PINEDA LARA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "LizethIM": {
+        "nombre": "LIZETH IBARRA MENDOZA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "LuisAPR": {
+        "nombre": "LUIS ADRIAN PEREZ RABAZA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "LuisARD": {
+        "nombre": "LUIS ALBERTO RUIZ DOMINGUEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "LuisCA": {
+        "nombre": "LUIS ANDRES CHAVEZ ALARCON",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "LuviaJMP": {
+        "nombre": "LUVIA JUDITH MARTINEZ PEREZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "MariaAMR": {
+        "nombre": "MARIA ALEJANDRA MARIN RUIZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "MariaGH": {
+        "nombre": "MARIA DEL ROSARIO GOMEZ HERNANDEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "MariaFTA": {
+        "nombre": "MARIA FERNANDA TELLO ALAMILLA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "MarlinJC": {
+        "nombre": "MARLIN JIMENEZ CULEBRO",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "MarviTR": {
+        "nombre": "MARVIN ELIAS TORRES REYES",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "MiriamPE": {
+        "nombre": "VALERIA YAMILETH NAJERA CRUZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "OlgaLCM": {
+        "nombre": "OLGA LILIA CUESTA MUÑOZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "RamonAMS": {
+        "nombre": "RAMON ALEJANDRO MARTINEZ SALDAÑA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "Raymon": {
+        "nombre": "RAYMON RODRIGUEZ CAMERAS",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "RogerCG": {
+        "nombre": "ROGER ALEJANDRO CRUZ GAMBOA",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "ROSAIHJ": {
+        "nombre": "ROSA IRENE HERNANDEZ JIMENEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "MarenyVM": {
+        "nombre": "ROSA MARENY VICTORIO MENDEZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "RoseinNF": {
+        "nombre": "ROSEIN NUCAMENDI FUENTES",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "UribeDS": {
+        "nombre": "URIBE DOMINGUEZ SANDOVAL",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
+    },
+    "YureliNC": {
+        "nombre": "YURELI NAJERA CRUZ",
+        "puesto": "DIGITALIZADOR",
+        "turno": "MATUTINO",
+        "lugar": "5 DE MAYO"
     }
 }
